@@ -38,7 +38,7 @@ var createNewTaskElement=function(taskString){
 
     //Each elements, needs appending
     checkBox.type="checkbox";
-    checkBox.className="list_item__checkbox";
+    checkBox.className="list-item__checkbox";
     editInput.type="text";
     editInput.className="text-input list-item__text_input  task";
 
@@ -96,8 +96,12 @@ var editTask=function(){
         //switch to .edit-mode
         //label becomes the inputs value.
         label.innerText=editInput.value;
+        label.classList.remove("list-item__label_edit");
+        editInput.classList.remove("list-item__text_input_edit");
         editBtn.innerText="Edit";
     }else{
+        label.classList.add("list-item__label_edit");
+        editInput.classList.add("list-item__text_input_edit");
         editInput.value=label.innerText;
         editBtn.innerText="Save";
     }
@@ -125,6 +129,7 @@ var taskCompleted=function(){
 
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
+    listItem.children[1].classList.add("list-item__label_comleted");
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
@@ -137,6 +142,7 @@ var taskIncomplete=function(){
     //When the checkbox is unchecked
     //Append the task list item to the #incompleteTasks.
     var listItem=this.parentNode;
+    listItem.children[1].classList.remove("list-item__label_comleted");
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
 }

@@ -111,7 +111,7 @@ button{
   vertical-align: middle;
 }
 
-.list_item__checkbox {
+.list-item__checkbox {
   margin: 0 10px;
 }
 .list-item__label {
@@ -133,7 +133,7 @@ button{
 }
 
 /* Completed */
-.completed-tasks .label {
+.list-item__label_comleted {
   text-decoration: line-through;
   color: #888;
 }
@@ -143,11 +143,11 @@ button{
   display: none;
 }
 
-.edit-mode .text-input {
+.list-item__text_input_edit{
   display: inline-block;
   width: 224px;
 }
 
-.edit-mode .label {
+.list-item__label_edit {
   display: none;
 }
