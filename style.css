@@ -121,7 +121,7 @@ button{
   font-size: 18px;
   width: 226px;
 }
-.list-item__text_input  {
+.list-item__text-input  {
   width: 226px;
 }
 .delete__img {
@@ -140,11 +140,11 @@ button{
 }
 
 /* Edit Task */
-.list-item__text_input {
+.list-item__text-input {
   display: none;
 }
 
-.list-item__text_input_edit{
+.list-item__text-input_edit{
   display: inline-block;
   width: 224px;
 }

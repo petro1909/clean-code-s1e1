@@ -40,7 +40,7 @@ var createNewTaskElement=function(taskString){
     checkBox.type="checkbox";
     checkBox.className="list-item__checkbox";
     editInput.type="text";
-    editInput.className="text-input list-item__text_input  task";
+    editInput.className="text-input list-item__text-input  task";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="button list-item__edit";
@@ -97,11 +97,11 @@ var editTask=function(){
         //label becomes the inputs value.
         label.innerText=editInput.value;
         label.classList.remove("list-item__label_edit");
-        editInput.classList.remove("list-item__text_input_edit");
+        editInput.classList.remove("list-item__text-input_edit");
         editBtn.innerText="Edit";
     }else{
         label.classList.add("list-item__label_edit");
-        editInput.classList.add("list-item__text_input_edit");
+        editInput.classList.add("list-item__text-input_edit");
         editInput.value=label.innerText;
         editBtn.innerText="Save";
     }
